@@ -84,21 +84,24 @@ header {
   font-size: 1.5rem;
 }
 
-.angle-down-icon {
+.scroll-arrow {
   position: absolute;
-  bottom: 10%;
+  bottom: 8%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
-  border: 3px solid #4A2D2A;
-  border-radius: 50%;
-} 
-
-.angle-down-icon a {
-  text-decoration: none;
-  color: #4A2D2A;
-  padding: 1rem;
+  transform: translateX(-50%);
+  cursor: pointer;
+  animation: bounce 1.6s infinite;
 }
+
+.scroll-arrow svg {
+  display: block;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 10px); }
+}
+
 
 /* ////........About Me........//// */
 
